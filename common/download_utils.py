@@ -82,3 +82,29 @@ def download_week2_resources(force=False):
         "data",
         force=force
     )
+
+
+def download_week3_resources(force=False):
+    sequential_downloader(
+        "week3",
+        [
+            "train.tsv",
+            "validation.tsv",
+            "test.tsv",
+            "test_embeddings.tsv",
+        ],
+        "data",
+        force=force
+    )
+
+
+def download_project_resources(force=False):
+    sequential_downloader(
+        "project",
+        [
+            "dialogues.tsv",
+            "tagged_posts.tsv",
+        ],
+        "data",
+        force=force
+    )
