@@ -21,14 +21,13 @@ https://docs.docker.com/toolbox/toolbox_install_windows/
 
 
 
-
 ## Get container image
 
 To get the latest version of the container image run:
 ```sh
 docker pull akashin/coursera-aml-nlp
 ```
-This will download all dependencies that should in total take approximately 2.3GB.
+It containes Ubuntu 16.04 Linux distirbutive and all dependencies that you need for our course. The downloaded image takes approximately 2.3GB. 
 
 **Note:** If you are getting an error "Got permission denied while trying to connect to the Docker daemon socket...", you need to add current user to the docker group:
 ```sh
@@ -44,7 +43,7 @@ Now you can start new container from this image with:
 ```sh
 docker run -it -p 127.0.0.1:8080:8080 --name coursera-aml-nlp akashin/coursera-aml-nlp
 ```
-This will start the Ubuntu instance and give you an access to its' command line.
+This will start the Ubuntu instance and give you an access to its command line. You can type `run_notebook` to launch IPython notebook server. 
 
 You may find it useful to mount a directory from your local machine within the container using `-v` option:
 ```sh
