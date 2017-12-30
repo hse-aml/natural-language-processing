@@ -1,0 +1,17 @@
+
+===================================================================
+Welcome to the Docker container for the Coursera NLP course.
+
+This container contains dependencies that you might need
+to complete course assignments.
+
+You can also install any additional system dependencies with
+> apt-get install PACKAGE_NAME
+
+And Python dependencies with
+> pip3 install PACKAGE_NAME
+
+To run Jupyter Notebook in the container just type
+> run_notebook
+===================================================================
+
