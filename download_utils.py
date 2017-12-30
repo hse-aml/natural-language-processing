@@ -49,5 +49,31 @@ def link_all_files_from_dir(src_dir, dst_dir):
             if not os.path.exists(dst_file):
                 os.symlink(os.path.abspath(src_file), dst_file)
 
+
 def link_resources():
     link_all_files_from_dir("../readonly/dataset/", ".")
+
+
+def download_week1_resources():
+    sequential_downloader(
+        "week1",
+        [
+            "train.tsv",
+            "validation.tsv",
+            "test.tsv",
+            "text_prepare_tests.tsv",
+        ],
+        "data"
+    )
+
+
+def download_week2_resources():
+    sequential_downloader(
+        "week2",
+        [
+            "train.txt",
+            "validation.txt",
+            "test.txt",
+        ],
+        "data"
+    )

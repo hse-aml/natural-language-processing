@@ -101,4 +101,4 @@ ENV/
 .mypy_cache/
 
 # Data for assignments
-readonly/
+data/
