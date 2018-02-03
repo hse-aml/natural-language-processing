@@ -3,6 +3,8 @@
 import os
 import shutil
 import tqdm
+# Address problem in tqdm library. For details see: https://github.com/tqdm/tqdm/issues/481
+tqdm.monitor_interval = 0
 import requests
 
 REPOSITORY_PATH="https://github.com/hse-aml/natural-language-processing"
