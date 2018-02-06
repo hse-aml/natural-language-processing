@@ -41,8 +41,10 @@ def _aggregate_metrics(results, total_correct):
         total_predicted_entities += n_pred
         total_precision += tag_metrics['precision'] * n_pred
         total_recall += tag_metrics['recall'] * n_true
+    
     accuracy = total_correct / total_true_entities * 100
-    total_precision = total_precision / total_predicted_entities
+    if total_predicted_entities > 0:
+        total_precision = total_precision / total_predicted_entities
     total_recall = total_recall / total_true_entities
     if total_precision + total_recall > 0:
         total_f1 = 2 * total_precision * total_recall / (total_precision + total_recall)
