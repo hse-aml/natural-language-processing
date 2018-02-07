@@ -20,6 +20,7 @@ def download_file(url, file_path):
             for chunk in r.iter_content(32 * 1024):
                 f.write(chunk)
                 bar.update(len(chunk))
+            bar.close()
     except Exception:
         print("Download failed")
     finally:
