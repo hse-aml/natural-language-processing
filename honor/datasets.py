@@ -20,6 +20,7 @@ import re
 from time import time
 
 import nltk
+from tqdm import tqdm
 
 """
 Load the cornell movie dialog corpus.
@@ -258,11 +259,7 @@ def extractText(line, fast_preprocessing=True):
 
 def splitConversations(conversations, max_len=20, fast_preprocessing=True):
     data = []
-    conversation_count = len(conversations)
-    log_frequency = conversation_count // 10
-    for i, conversation in enumerate(conversations):
-        if i % log_frequency == 0:
-            print('Processing conversation [{}/{}]'.format(i, conversation_count))
+    for i, conversation in enumerate(tqdm(conversations)):
         lines = conversation['lines']
         for i in range(len(lines) - 1):
             request = extractText(lines[i]['text'])
@@ -274,11 +271,11 @@ def splitConversations(conversations, max_len=20, fast_preprocessing=True):
 
 def readCornellData(path, max_len=20, fast_preprocessing=True):
     dataset = CornellData(path)
-    conversations = dataset.getConversations(fast_preprocessing=fast_preprocessing)
-    return splitConversations(conversations, max_len=max_len)
+    conversations = dataset.getConversations()
+    return splitConversations(conversations, max_len=max_len, fast_preprocessing=fast_preprocessing)
 
 
 def readOpensubsData(path, max_len=20, fast_preprocessing=True):
     dataset = OpensubsData(path)
-    conversations = dataset.getConversations(fast_preprocessing=fast_preprocessing)
-    return splitConversations(conversations, max_len=max_len)
+    conversations = dataset.getConversations()
+    return splitConversations(conversations, max_len=max_len, fast_preprocessing=fast_preprocessing)
