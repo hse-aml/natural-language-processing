@@ -75,7 +75,7 @@ def main():
     # advanced DialogueManager instead of SimpleDialogueManager. 
     
     # This is the point where you plug it into the Telegram bot. 
-    # Do not forget to import all needed dependendies when you do so.
+    # Do not forget to import all needed dependencies when you do so.
     
     simple_manager = SimpleDialogueManager()
     bot = BotHandler(token, simple_manager)

@@ -37,7 +37,7 @@ class DialogueManager(object):
         self.intent_recognizer = unpickle_file(paths['INTENT_RECOGNIZER'])
         self.tfidf_vectorizer = unpickle_file(paths['TFIDF_VECTORIZER'])
 
-        self.ANSWER_TEMPLATE = 'I think its about %s\n This thread might help you: https://stackoverflow.com/questions/%s'
+        self.ANSWER_TEMPLATE = 'I think its about %s\nThis thread might help you: https://stackoverflow.com/questions/%s'
 
         # Goal-oriented part:
         self.tag_classifier = unpickle_file(paths['TAG_CLASSIFIER'])
@@ -47,6 +47,9 @@ class DialogueManager(object):
         """Initializes self.chitchat_bot with some conversational model."""
 
         # Hint: you might want to create and train chatterbot.ChatBot here.
+        # It could be done by creating ChatBot with the *trainer* parameter equals 
+        # "chatterbot.trainers.ChatterBotCorpusTrainer"
+        # and then calling *train* function with "chatterbot.corpus.english" param
         
         ########################
         #### YOUR CODE HERE ####
@@ -70,7 +73,7 @@ class DialogueManager(object):
         
         # Goal-oriented part:
         else:        
-            # Pass features to tag_clasifier to get predictions.
+            # Pass features to tag_classifier to get predictions.
             tag = #### YOUR CODE HERE ####
             
             # Pass prepared_question to thread_ranker to get predictions.
