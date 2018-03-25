@@ -4,6 +4,7 @@ import requests
 import time
 import argparse
 import os
+import json
 
 from requests.compat import urljoin
 
@@ -24,7 +25,13 @@ class BotHandler(object):
 
     def get_updates(self, offset=None, timeout=30):
         params = {"timeout": timeout, "offset": offset}
-        resp = requests.get(urljoin(self.api_url, "getUpdates"), params).json()
+        raw_resp = requests.get(urljoin(self.api_url, "getUpdates"), params)
+        try:
+            resp = raw_resp.json()
+        except json.decoder.JSONDecodeError as e:
+            print("Failed to parse response {}: {}.".format(raw_resp.content, e))
+            return []
+
         if "result" not in resp:
             return []
         return resp["result"]
