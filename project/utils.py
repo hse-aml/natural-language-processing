@@ -44,6 +44,7 @@ def load_embeddings(embeddings_path):
     
     # Hint: you have already implemented a similar routine in the 3rd assignment.
     # Note that here you also need to know the dimension of the loaded embeddings.
+    # When you load the embeddings, use numpy.float32 type as dtype
 
     ########################
     #### YOUR CODE HERE ####
