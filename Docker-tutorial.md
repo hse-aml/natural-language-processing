@@ -89,6 +89,17 @@ You can install more packages in the container if needed:
 docker exec coursera-aml-nlp pip3 install PACKAGE_NAME
 ```
 
+## Change RAM limits of the container
+
+Your container might have memory limits that are different from the actual limits of your physical machine, which might lead to a crash of your code due memory shortage.
+
+* If you're running Windows or OSX, the default limit is 2GB, but you can change it by following this tutorials:
+  * For Windows: https://docs.docker.com/docker-for-windows/#advanced
+  * For Mac OSX: https://docs.docker.com/docker-for-mac/#advanced
+
+* If you're running Linux, you're all set as the memory limits are the same as the physical memory of your machine.
+
+
 ## Further reading
 
 If you are interested to know more about Docker, check out this articles: 
