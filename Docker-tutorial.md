@@ -136,11 +136,14 @@ e5b7bcd85a1b        akashin/coursera-aml-nlp   "/bin/bash"         Less than a s
 If the part about `PORTS` differs, remove the current container following [instructions](#other-operations-on-the-container) and start it again.
 - Make sure that browser proxy settings don't interfere with accessing local web sites.
 
-### Can't run `run_notebook` command
+### Can't run `run_notebook` or `starspace` command
 Make sure that you're executing it in the context of the Docker container as described [here](#run-container-for-the-first-time). 
 
 ### "Name is already in use by container" when trying to run the container
 This means that you the container with this name is already created. You can connect to this container or remove it by following [instructions](#other-operations-on-the-container).
+
+### StarSpace/Jupyter notebook crashes in Docker
+This usually happens due to low default 2GB memory limit on Windows and OSX. Follow this [instructions](#change-ram-limits-of-the-container) to fix this.
 
 ## Reporting the issue to the Coursera forum
 Before reporting the issue to the Coursera forum, please, make sure that you've checked the [troubleshooting](#troubleshooting) steps. Only if they don't help, post all relevant error messages, throubleshooting results, and the following information to your post:
