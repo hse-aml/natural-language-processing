@@ -76,6 +76,11 @@ To show currently running and stopped containers with their status:
 docker ps -a
 ```
 
+To connect to already running container with name `coursera-aml-nlp` run:
+```
+docker exec -it coursera-aml-nlp bash
+```
+
 To remove the container and all data associated with it:
 ```sh
 docker rm coursera-aml-nlp
@@ -108,7 +113,7 @@ If you are interested to know more about Docker, check out this articles:
 
 ## Troubleshooting
 
-### Verify your Docker installation by running "Hello World" application.
+### Verify your Docker installation by running "Hello World" application
 - Run `docker pull hello-world`. You should see a message that ends with 
     “Status: Downloaded newer image for hello-world:latest”.
 - Run `docker run hello-world`.  You should see a message that starts with
@@ -117,8 +122,14 @@ If you are interested to know more about Docker, check out this articles:
 
 If you see any errors, follow relevant troubleshooting steps.
 
-### “Unauthorized: authentication required” when trying to pull Docker image.
+### “Unauthorized: authentication required” when trying to pull Docker image
 Run `docker logout` and try pulling again. If this doesn't help, make sure the system date is set correctly and try again. If this doesn't help, reinstall Docker and try again.
+
+### Can't run `run_notebook` command
+Make sure that you're executing it in the context of the Docker container as described [here](#run-container-for-the-first-time). 
+
+### "Name is already in use by container" when trying to run the container
+This means that you the container with this name is already created. You can connect to this container or remove it by following [instruction](#other-operations-on-the-container).
 
 ## Credits
 
