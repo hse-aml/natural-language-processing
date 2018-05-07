@@ -76,10 +76,11 @@ To show currently running and stopped containers with their status:
 docker ps -a
 ```
 
-To connect to already running container with name `coursera-aml-nlp` run:
+To connect to a Bash shell in the already running container with name `coursera-aml-nlp` run:
 ```
 docker exec -it coursera-aml-nlp bash
 ```
+This will drop you into the standard Linux Bash shell that supports common commands like `ls`, `wget` or `python3`.
 
 To remove the container and all data associated with it:
 ```sh
@@ -136,8 +137,13 @@ e5b7bcd85a1b        akashin/coursera-aml-nlp   "/bin/bash"         Less than a s
 If the part about `PORTS` differs, remove the current container following [instructions](#other-operations-on-the-container) and start it again.
 - Make sure that browser proxy settings don't interfere with accessing local web sites.
 
+### How do I load data into Docker container?
+To access the data in the container, we recommend to use `-v` flag described [here](#run-container-for-the-first-time) to mount a local directory from your computer into the container filesystem. For more details read [Docker documentation](https://docs.docker.com/storage/volumes/).
+
+Alternatively, you can download data using Jupyter "Upload" button or `wget` command in the [Bash shell](#other-operations-on-the-container) of the container.
+
 ### Can't run `run_notebook` or `starspace` command
-Make sure that you're executing it in the context of the Docker container as described [here](#run-container-for-the-first-time). 
+Make sure that you're executing it in the context of the Docker container as described [here](#run-container-for-the-first-time).
 
 ### "Name is already in use by container" when trying to run the container
 This means that you the container with this name is already created. You can connect to this container or remove it by following [instructions](#other-operations-on-the-container).
