@@ -93,11 +93,11 @@ docker exec coursera-aml-nlp pip3 install PACKAGE_NAME
 
 Your container might have memory limits that are different from the actual limits of your physical machine, which might lead to a crash of your code due memory shortage.
 
-* If you're running Windows or OSX, the default limit is 2GB, but you can change it by following this tutorials:
-  * For Windows: https://docs.docker.com/docker-for-windows/#advanced
-  * For Mac OSX: https://docs.docker.com/docker-for-mac/#advanced
+- If you're running Windows or OSX, the default limit is 2GB, but you can change it by following this tutorials:
+  - For Windows: https://docs.docker.com/docker-for-windows/#advanced
+  - For Mac OSX: https://docs.docker.com/docker-for-mac/#advanced
 
-* If you're running Linux, you're all set as the memory limits are the same as the physical memory of your machine.
+- If you're running Linux, you're all set as the memory limits are the same as the physical memory of your machine.
 
 
 ## Further reading
@@ -106,6 +106,19 @@ If you are interested to know more about Docker, check out this articles:
 - Using Jupyter notebook from Docker: https://www.dataquest.io/blog/docker-data-science/
 - General introduction to Docker: https://docker-curriculum.com/
 
+## Troubleshooting
+
+### Verify your Docker installation by running "Hello World" application.
+- Run `docker pull hello-world`. You should see a message that ends with 
+    “Status: Downloaded newer image for hello-world:latest”.
+- Run `docker run hello-world`.  You should see a message that starts with
+    “Hello from Docker!
+    This message shows that your installation appears to be working correctly.”
+
+If you see any errors, follow relevant troubleshooting steps.
+
+### “Unauthorized: authentication required” when trying to pull Docker image.
+Run `docker logout` and try pulling again. If this doesn't help, make sure the system date is set correctly and try again. If this doesn't help, reinstall Docker and try again.
 
 ## Credits
 
