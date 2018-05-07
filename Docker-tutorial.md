@@ -131,6 +131,14 @@ Make sure that you're executing it in the context of the Docker container as des
 ### "Name is already in use by container" when trying to run the container
 This means that you the container with this name is already created. You can connect to this container or remove it by following [instruction](#other-operations-on-the-container).
 
+## Reporting the issue to the Coursera forum
+Before reporting the issue to the Coursera forum, please, make sure that you've checked the [troubleshooting](#troubleshooting) steps. Only if they don't help, post all relevant error messages, throubleshooting results, and the following information to your post:
+
+- Your operating system (e.g. Windows 7, Ubuntu Linux, OSX 10.13.3)
+- Your docker version (e.g. Docker Toolbox, Docker for Windows, output of `docker --version`)
+- Output of `docker ps -a`, `docker info`, `docker version -f "{{ .Server.Os }}"` (share thorough https://gist.github.com/ or https://pastebin.com/)
+- Output of `wget http://localhost:8080` (or `wget http://192.168.99.100:8080` for Docker Toolbox), executed from within Docker container and outside of it
+
 ## Credits
 
 The template for this dockerfile was taken from https://github.com/ZEMUSHKA/coursera-aml-docker
