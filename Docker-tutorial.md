@@ -125,11 +125,22 @@ If you see any errors, follow relevant troubleshooting steps.
 ### “Unauthorized: authentication required” when trying to pull Docker image
 Run `docker logout` and try pulling again. If this doesn't help, make sure the system date is set correctly and try again. If this doesn't help, reinstall Docker and try again.
 
+### Can't open Jupyter notebook in the browser
+If you try to open "http://localhost:8080" or "http://127.0.0.1:8080" in your browser, when `run_notebook` command is started, and you can't access your notebooks, here are some advices:
+- If you're using Docker Toolbox on Windows, try accessing "http://192.168.99.100:8080" instead. If this doesn't work, follow the instructions [on official Docker docs](https://docs.docker.com/docker-for-windows/troubleshoot/#limitations-of-windows-containers-for-localhost-and-published-ports) and on [Stackoverflow](https://stackoverflow.com/questions/42866013/docker-toolbox-localhost-not-working).
+- Make sure that you're running container with `-p` flag as described [here](#run-container-for-the-first-time) and that the output of `docker ps` contains a message like this:
+```
+CONTAINER ID        IMAGE                      COMMAND             CREATED                  STATUS              PORTS               NAMES
+e5b7bcd85a1b        akashin/coursera-aml-nlp   "/bin/bash"         Less than a second ago   Up 2 seconds        8080/tcp            peaceful_lamarr
+```
+If the part about `PORTS` differs, remove the current container following [instructions](#other-operations-on-the-container) and start it again.
+- Make sure that browser proxy settings don't interfere with accessing local web sites.
+
 ### Can't run `run_notebook` command
 Make sure that you're executing it in the context of the Docker container as described [here](#run-container-for-the-first-time). 
 
 ### "Name is already in use by container" when trying to run the container
-This means that you the container with this name is already created. You can connect to this container or remove it by following [instruction](#other-operations-on-the-container).
+This means that you the container with this name is already created. You can connect to this container or remove it by following [instructions](#other-operations-on-the-container).
 
 ## Reporting the issue to the Coursera forum
 Before reporting the issue to the Coursera forum, please, make sure that you've checked the [troubleshooting](#troubleshooting) steps. Only if they don't help, post all relevant error messages, throubleshooting results, and the following information to your post:
