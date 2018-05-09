@@ -146,7 +146,7 @@ Alternatively, you can download data using Jupyter "Upload" button or `wget` com
 Make sure that you're executing it in the context of the Docker container as described [here](#run-container-for-the-first-time).
 
 ### "Name is already in use by container" when trying to run the container
-This means that you the container with this name is already created. You can connect to this container or remove it by following [instructions](#other-operations-on-the-container).
+This means that the container with this name is already created. You can connect to this container or remove it by following [instructions](#other-operations-on-the-container).
 
 ### StarSpace/Jupyter notebook crashes in Docker
 This usually happens due to low default 2GB memory limit on Windows and OSX. Follow this [instructions](#change-ram-limits-of-the-container) to fix this.
