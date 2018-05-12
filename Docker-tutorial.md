@@ -41,13 +41,13 @@ Then you need to logout and login to the system again (disconnect and connect to
 
 Now you can start new container from this image with:
 ```sh
-docker run -it -p 127.0.0.1:8080:8080 --name coursera-aml-nlp akashin/coursera-aml-nlp
+docker run -it -p 8080:8080 --name coursera-aml-nlp akashin/coursera-aml-nlp
 ```
 This will start the Ubuntu instance and give you an access to its command line. You can type `run_notebook` to launch IPython notebook server. 
 
 You may find it useful to mount a directory from your local machine within the container using `-v` option:
 ```sh
-docker run -it -p 127.0.0.1:8080:8080 --name coursera-aml-nlp -v $PWD:/root/coursera akashin/coursera-aml-nlp
+docker run -it -p 8080:8080 --name coursera-aml-nlp -v $PWD:/root/coursera akashin/coursera-aml-nlp
 ```
 This will use shell alias `$PWD` to mount current directory to the folder `/root/coursera` in the container. Alternatively, you can mount arbitrary directory by replacing `$PWD` with a custom path.
 
