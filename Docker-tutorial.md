@@ -45,11 +45,21 @@ docker run -it -p 8080:8080 --name coursera-aml-nlp akashin/coursera-aml-nlp
 ```
 This will start the Ubuntu instance and give you an access to its command line. You can type `run_notebook` to launch IPython notebook server. 
 
-You may find it useful to mount a directory from your local machine within the container using `-v` option:
+You may find it useful to mount a directory from your local machine within the container using `-v` option.
+
+For Linux and OSX, the following command should work:
 ```sh
 docker run -it -p 8080:8080 --name coursera-aml-nlp -v $PWD:/root/coursera akashin/coursera-aml-nlp
 ```
 This will use shell alias `$PWD` to mount current directory to the folder `/root/coursera` in the container. Alternatively, you can mount arbitrary directory by replacing `$PWD` with a custom path.
+
+For Windows, there are some extra [steps](https://rominirani.com/docker-on-windows-mounting-host-directories-d96f3f056a2c) involved, and the launch command looks like
+```sh
+docker run -it -p 8080:8080 --name coursera-aml-nlp --user root -v /c/Users/$YOUR_USERNAME:/root/coursera akashin/coursera-aml-nlp
+```
+Where `/c/Users/$YOUR_USERNAME` is the path to your user's home folder.
+
+If you're using Docker Toolbox on Windows, the command given above might not work because of the additional VirtualBox layer involved. Instead, we recommend you to follow the guidance in http://blog.shahinrostami.com/2017/11/docker-toolbox-windows-7-shared-volumes/.
 
 ## Stop and resume container
 
