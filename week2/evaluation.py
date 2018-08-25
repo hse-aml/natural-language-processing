@@ -42,7 +42,12 @@ def _aggregate_metrics(results, total_correct):
         total_precision += tag_metrics['precision'] * n_pred
         total_recall += tag_metrics['recall'] * n_true
     
-    accuracy = total_correct / total_true_entities * 100
+    accuracy = 0
+    if total_true_entities > 0:
+        accuracy = total_correct / total_true_entities * 100
+    else:
+        print('CAUTION! Accuracy equals zero because there are no '\
+              'correct entities. Check the correctness of your data.')
     if total_predicted_entities > 0:
         total_precision = total_precision / total_predicted_entities
     total_recall = total_recall / total_true_entities
