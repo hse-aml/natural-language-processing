@@ -2,17 +2,11 @@
 # -*- coding: utf-8 -*-
 import os
 import shutil
-
-try:
-    import tqdm
-    # Address problem in tqdm library. For details see: https://github.com/tqdm/tqdm/issues/481
-    tqdm.monitor_interval = 0
-except ImportError:
-    tqdm = None
-
 import requests
+from common import tqdm_utils
 
-REPOSITORY_PATH="https://github.com/hse-aml/natural-language-processing"
+
+REPOSITORY_PATH = "https://github.com/hse-aml/natural-language-processing"
 
 
 def download_file(url, file_path):
@@ -20,19 +14,12 @@ def download_file(url, file_path):
     total_size = int(r.headers.get('content-length'))
     try:
         with open(file_path, 'wb', buffering=16*1024*1024) as f:
-            if tqdm:
-                bar = tqdm.tqdm_notebook(total=total_size, unit='B', unit_scale=True)
-                bar.set_description(os.path.split(file_path)[-1])
-
+            bar = tqdm_utils.tqdm_notebook_failsafe(total=total_size, unit='B', unit_scale=True)
+            bar.set_description(os.path.split(file_path)[-1])
             for chunk in r.iter_content(32 * 1024):
                 f.write(chunk)
-                if tqdm:
-                    bar.update(len(chunk))
-
-            if tqdm:
-                bar.close()
-            else:
-                print("File {!r} successfully downloaded".format(file_path))
+                bar.update(len(chunk))
+            bar.close()
     except Exception:
         print("Download failed")
     finally:
