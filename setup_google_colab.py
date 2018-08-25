@@ -5,8 +5,7 @@ import os
 
 def download_github_code(path):
     filename = path.rsplit("/")[-1]
-    # TODO replace with master after merge
-    os.system("wget https://raw.githubusercontent.com/hse-aml/natural-language-processing/colab/{} -O {}".format(path, filename))
+    os.system("wget https://raw.githubusercontent.com/hse-aml/natural-language-processing/master/{} -O {}".format(path, filename))
 
 
 def setup_common():

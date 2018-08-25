@@ -12,7 +12,7 @@ Here's how you can use it:
 5. Click **Runtime -> Change runtime type** and select **GPU** in Hardware accelerator box
 6. Execute the following code in the first cell:
 ```python
-! wget https://raw.githubusercontent.com/hse-aml/natural-language-processing/colab/setup_google_colab.py -O setup_google_colab.py
+! wget https://raw.githubusercontent.com/hse-aml/natural-language-processing/master/setup_google_colab.py -O setup_google_colab.py
 import setup_google_colab
 setup_google_colab.setup_week1()  # change to the week you're working on
 ```
