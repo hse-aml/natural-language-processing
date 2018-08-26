@@ -5,7 +5,7 @@ https://www.coursera.org/learn/language-processing
 Google has released its own flavour of Jupyter called Colab, which has free GPUs!
 
 Here's how you can use it:
-1. Open https://colab.research.google.com
+1. Open https://colab.research.google.com, click **Sign in** in the upper right corner, use your Google credentials to sign in.
 2. Click **GITHUB** tab, paste https://github.com/hse-aml/natural-language-processing and press Enter
 3. Choose the notebook you want to open, e.g. week1/week1-MultilabelClassification.ipynb
 4. Click **File -> Save a copy in Drive...** to save your progress in Google Drive
