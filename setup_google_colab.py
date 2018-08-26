@@ -29,6 +29,13 @@ def setup_common():
     os.system("mv download_utils.py tqdm_utils.py __init__.py common/")
 
 
+def setup_starspace():
+    os.system("wget https://dl.bintray.com/boostorg/release/1.63.0/source/boost_1_63_0.zip")
+    os.system("unzip boost_1_63_0.zip && mv boost_1_63_0 /usr/local/bin")
+    os.system("git clone https://github.com/facebookresearch/Starspace.git")
+    os.system("cd Starspace && make && cp -Rf starspace /usr/local/bin")
+
+
 def setup_week1():
     setup_common()
     download_github_code("week1/grader.py")
@@ -44,6 +51,7 @@ def setup_week3():
     setup_common()
     download_github_code("week3/grader.py")
     download_github_code("week3/util.py")
+    setup_starspace()
 
 
 def setup_week4():
@@ -55,6 +63,7 @@ def setup_project():
     download_github_code("project/dialogue_manager.py")
     download_github_code("project/main_bot.py")
     download_github_code("project/utils.py")
+    setup_starspace()
 
 
 def setup_honor():
