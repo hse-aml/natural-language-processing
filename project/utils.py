@@ -49,7 +49,10 @@ def load_embeddings(embeddings_path):
     ########################
     #### YOUR CODE HERE ####
     ########################
-    pass
+
+    # remove this when you're done
+    raise NotImplementedError(
+        "Open utils.py and fill with your code or copy its contents to Jupyter cell and fill in the gaps!")
 
 
 def question_to_vec(question, embeddings, dim):
@@ -60,7 +63,10 @@ def question_to_vec(question, embeddings, dim):
     ########################
     #### YOUR CODE HERE ####
     ########################
-    pass
+
+    # remove this when you're done
+    raise NotImplementedError(
+        "Open utils.py and fill with your code or copy its contents to Jupyter cell and fill in the gaps!")
 
 
 def unpickle_file(filename):
