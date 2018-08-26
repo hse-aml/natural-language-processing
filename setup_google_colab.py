@@ -30,10 +30,11 @@ def setup_common():
 
 
 def setup_starspace():
-    os.system("wget https://dl.bintray.com/boostorg/release/1.63.0/source/boost_1_63_0.zip")
-    os.system("unzip boost_1_63_0.zip && mv boost_1_63_0 /usr/local/bin")
-    os.system("git clone https://github.com/facebookresearch/Starspace.git")
-    os.system("cd Starspace && make && cp -Rf starspace /usr/local/bin")
+    if not os.path.exists("/usr/local/bin/starspace"):
+        os.system("wget https://dl.bintray.com/boostorg/release/1.63.0/source/boost_1_63_0.zip")
+        os.system("unzip boost_1_63_0.zip && mv boost_1_63_0 /usr/local/bin")
+        os.system("git clone https://github.com/facebookresearch/Starspace.git")
+        os.system("cd Starspace && make && cp -Rf starspace /usr/local/bin")
 
 
 def setup_week1():
