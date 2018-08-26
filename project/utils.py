@@ -52,9 +52,9 @@ def load_embeddings(embeddings_path):
 
     # remove this when you're done
     raise NotImplementedError(
-        "Open utils.py and fill with your code OR copy its contents "
-        "(https://github.com/hse-aml/natural-language-processing/blob/master/project/utils.py) "
-        "to Jupyter cell and fill in the gaps (e.g. on Google Colab)!")
+        "Open utils.py and fill with your code. In case of Google Colab, download"
+        "(https://github.com/hse-aml/natural-language-processing/blob/master/project/utils.py), "
+        "edit locally and upload using '> arrow on the left edge' -> Files -> UPLOAD")
 
 
 def question_to_vec(question, embeddings, dim):
@@ -68,9 +68,9 @@ def question_to_vec(question, embeddings, dim):
 
     # remove this when you're done
     raise NotImplementedError(
-        "Open utils.py and fill with your code OR copy its contents "
-        "(https://github.com/hse-aml/natural-language-processing/blob/master/project/utils.py) "
-        "to Jupyter cell and fill in the gaps! (e.g. on Google Colab)")
+        "Open utils.py and fill with your code. In case of Google Colab, download"
+        "(https://github.com/hse-aml/natural-language-processing/blob/master/project/utils.py), "
+        "edit locally and upload using '> arrow on the left edge' -> Files -> UPLOAD")
 
 
 def unpickle_file(filename):
