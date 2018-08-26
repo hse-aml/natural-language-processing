@@ -9,7 +9,7 @@ Here's how you can use it:
 2. Click **GITHUB** tab, paste https://github.com/hse-aml/natural-language-processing and press Enter
 3. Choose the notebook you want to open, e.g. week1/week1-MultilabelClassification.ipynb
 4. Click **File -> Save a copy in Drive...** to save your progress in Google Drive
-5. Click **Runtime -> Change runtime type** and select **GPU** in Hardware accelerator box
+5. _If you need a GPU_, click **Runtime -> Change runtime type** and select **GPU** in Hardware accelerator box
 6. Execute the following code in the first cell:
 ```python
 ! wget https://raw.githubusercontent.com/hse-aml/natural-language-processing/master/setup_google_colab.py -O setup_google_colab.py
