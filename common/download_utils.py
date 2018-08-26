@@ -43,22 +43,6 @@ def sequential_downloader(version, fns, target_dir, force=False):
         download_from_github(version, fn, target_dir, force=force)
 
 
-def link_all_files_from_dir(src_dir, dst_dir):
-    os.makedirs(dst_dir, exist_ok=True)
-    for fn in os.listdir(src_dir):
-        src_file = os.path.join(src_dir, fn)
-        dst_file = os.path.join(dst_dir, fn)
-        if os.name == "nt":
-            shutil.copyfile(src_file, dst_file)
-        else:
-            if not os.path.exists(dst_file):
-                os.symlink(os.path.abspath(src_file), dst_file)
-
-
-def link_resources():
-    link_all_files_from_dir("../readonly/dataset/", ".")
-
-
 def download_week1_resources(force=False):
     sequential_downloader(
         "week1",
@@ -98,6 +82,9 @@ def download_week3_resources(force=False):
         "data",
         force=force
     )
+    print("Downloading GoogleNews-vectors-negative300.bin.gz (1.5G) for you, it will take a while...")
+    download_file("https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz",
+                  "GoogleNews-vectors-negative300.bin.gz")
 
 
 def download_project_resources(force=False):
