@@ -28,7 +28,8 @@ Then you will be able to see the notebooks on *localhost:8080* from your browser
 ```sh
 scp -i path/to/your_key.pem path/to/local_file ubuntu@ec2-XX-XXX-X-XX.us-east-2.compute.amazonaws.com:path/to/remote_file
 ``` 
-You might want to install [WinSCP](https://winscp.net/eng/docs/lang:ru) for data transfer if you are using Windows.
+You might need to install [WinSCP](https://winscp.net/eng/docs/lang:ru) for data transfer if you are using Windows.
 
-- It is also a good practice to use [tmux](https://medium.com/@peterxjang/a-minimalist-guide-to-tmux-13675fb160fa) to keep your remote session running even if you disconnect from the machine, e.g. by closing your laptop.
+- It is also a good practice to use [tmux](https://medium.com/@peterxjang/a-minimalist-guide-to-tmux-13675fb160fa) to keep your remote session running even if you disconnect from the machine, e.g. by closing your laptop. 
 
+Thus, to run your scipts on the machine, we suggest that you run:  ssh -> tmux -> docker -> python.
