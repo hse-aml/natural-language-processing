@@ -161,6 +161,10 @@ This means that the container with this name is already created. You can connect
 ### StarSpace/Jupyter notebook crashes in Docker
 This usually happens due to low default 2GB memory limit on Windows and OSX. Follow this [instructions](#change-ram-limits-of-the-container) to fix this.
 
+### "This computer doesn't have VT-X/AMD-v enabled", when trying to run the container
+This usually happens if you're using Docker Toolbox that needs Virtual Box support - hence the need for the hardware virtualization that can be enabled in BIOS.
+Try to turn on the VT-X support in BIOS as described in [Microsoft documentation](https://blogs.technet.microsoft.com/canitpro/2015/09/08/step-by-step-enabling-hyper-v-for-use-on-windows-10/) or on [GitHub](https://github.com/docker/machine/issues/4271).
+
 ## Reporting the issue to the Coursera forum
 Before reporting the issue to the Coursera forum, please, make sure that you've checked the [troubleshooting](#troubleshooting) steps. Only if they don't help, post all relevant error messages, throubleshooting results, and the following information to your post:
 
