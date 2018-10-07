@@ -14,7 +14,13 @@ Here's how you can use it:
 ```python
 ! wget https://raw.githubusercontent.com/hse-aml/natural-language-processing/master/setup_google_colab.py -O setup_google_colab.py
 import setup_google_colab
-setup_google_colab.setup_week1()  # change to the week you're working on
+# please, uncomment the week you're working on
+# setup_google_colab.setup_week1()  
+# setup_google_colab.setup_week2()
+# setup_google_colab.setup_week3()
+# setup_google_colab.setup_week4()
+# setup_google_colab.setup_project()
+# setup_google_colab.setup_honor()
 ```
 7. If you run many notebooks on Colab, they can continue to eat up memory,
 you can kill them with `! pkill -9 python3` and check with `! nvidia-smi` that GPU memory is freed.
