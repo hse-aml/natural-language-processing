@@ -24,6 +24,9 @@ ssh -L 8080:localhost:8080 -i path/to/private_key ubuntu@ec2-XX-XXX-X-XX.us-east
 ```
 Then you will be able to see the notebooks on *localhost:8080* from your browser on the local machine.
 
+If you're using PuTTY, before you start your SSH connection, go to the PuTTY Tunnels panel. Make sure the «Local» and «Auto» radio buttons are set. Enter the local port 8080 number into the «Source port» box. Enter the destination host name and port number into the «Destination» box, separated by a colon ubuntu@ec2-XX-XXX-X-XX.us-east-2.compute.amazonaws.com:8080.
+For more details see [this guide](https://www.akadia.com/services/ssh_putty.html).
+
 - Bring code and data to AWS instance, e.g.
 ```sh
 scp -i path/to/your_key.pem path/to/local_file ubuntu@ec2-XX-XXX-X-XX.us-east-2.compute.amazonaws.com:path/to/remote_file
