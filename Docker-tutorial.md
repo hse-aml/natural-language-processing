@@ -47,7 +47,8 @@ This will start the Ubuntu instance and give you an access to its command line. 
 
 Note that we are using `-p 8080:8080` argument to set up port forwarding to make IPython notebook accessible at address http://localhost:8080. If you're using AWS, make sure that you've [set up the port forwarding](https://github.com/hse-aml/natural-language-processing/blob/master/AWS-tutorial.md#2-set-up-dependencies-and-run-your-project) there as well.
 
-You may find it useful to mount a directory from your local machine within the container using `-v` option.
+Note, that the Docker image only contains system dependencies for the project (e.g. TensorFlow, Starspace).
+All other project-related files need to be exposed to the container manually though [Docker volumes](https://docs.docker.com/storage/volumes/). To do this, you will need to mount a directory from your local machine within the container using `-v` option.
 
 For Linux and OSX, the following command should work:
 ```sh
