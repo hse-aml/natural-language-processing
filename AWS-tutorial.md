@@ -11,7 +11,7 @@ First, you need to perform several preparatory steps (if you have already done t
 
 Next, you are ready to create your first EC2 instance:
 - [Launch a free tier instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-launch-instance). For Amazon Machine Image (AMI) choose **Ubuntu Server 16.04 LTS**.
-- [Connect to your instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-connect-to-instance-linux) using SSH.
+- [Connect to your instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-connect-to-instance-linux) using SSH. If you have problems connecting to the instance, try following this [troubleshooting guide](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/TroubleshootingInstancesConnecting.html).
 - Later on you can [start and stop](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html) your instance when needed, and [terminate](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html#ec2-clean-up-your-instance) it in the end.
 
 ### 2. Set up dependencies and run your project
