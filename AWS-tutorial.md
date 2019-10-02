@@ -29,7 +29,7 @@ For more details see [this guide](https://www.akadia.com/services/ssh_putty.html
 
 - Bring code and data to AWS instance, e.g.
 ```sh
-scp -i path/to/your_key.pem path/to/local_file ubuntu@ec2-XX-XXX-X-XX.us-east-2.compute.amazonaws.com:path/to/remote_file
+scp -i path/to/your_key.pem -r path/to/local_directory ubuntu@ec2-XX-XXX-X-XX.us-east-2.compute.amazonaws.com:path/to/remote_file
 ``` 
 You might need to install [WinSCP](https://winscp.net/eng/docs/lang:ru) for data transfer if you are using Windows.
 
