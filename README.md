@@ -1,6 +1,6 @@
 # Natural Language Processing course resources
 https://www.coursera.org/learn/language-processing
-
+Natural language processing (NLP) is a subfield of linguistics, computer science, information engineering, and artificial intelligence concerned with the interactions between computers and human (natural) languages, in particular how to program computers to process and analyze large amounts of natural language data.
 ## Running on Google Colab
 Google has released its own flavour of Jupyter called Colab, which has free GPUs!
 
