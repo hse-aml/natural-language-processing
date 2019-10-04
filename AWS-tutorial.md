@@ -35,4 +35,4 @@ You might need to install [WinSCP](https://winscp.net/eng/docs/lang:ru) for data
 
 - It is also a good practice to use [tmux](https://medium.com/@peterxjang/a-minimalist-guide-to-tmux-13675fb160fa) to keep your remote session running even if you disconnect from the machine, e.g. by closing your laptop. 
 
-Thus, to run your scipts on the machine, we suggest that you run:  ssh -> tmux -> docker -> python.
+Thus, to run your scripts on the machine, we suggest that you run:  ssh -> tmux -> Docker -> Python.
