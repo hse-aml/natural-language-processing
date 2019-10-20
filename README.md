@@ -30,6 +30,7 @@ you can kill them with `! pkill -9 python3` and check with `! nvidia-smi` that G
 For now, we use a simplified version of a progress bar suitable for Colab.
 * Blinking animation with `IPython.display.clear_output()`.
 It's usable, but still looking for a workaround.
+* If you see an error "No module named 'common'", make sure you've uncommented the assignment-specific line in step 6, restart your kernel and execute all cells again
 
 ## Running elsewhere
 
