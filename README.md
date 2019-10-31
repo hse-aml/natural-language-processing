@@ -1,7 +1,11 @@
 # Natural Language Processing course resources
+This github contains practical assignments for Natural Language Processing course by Higher School of Economics:
 https://www.coursera.org/learn/language-processing
+In this course you will learn how to solve common NLP problems using classical and deep learning approaches.
 
-## Running on Google Colab
+From a practical side, we expect your familiarity with Python, since we will use it for all assignments in the course. Two of the assignments will also involve TensorFlow. You will work with many other libraries, including NLTK, Scikit-learn, and Gensim. You have several options on how to set it up.
+
+## 1. Running on Google Colab
 Google has released its own flavour of Jupyter called Colab, which has free GPUs!
 
 Here's how you can use it:
@@ -32,8 +36,14 @@ For now, we use a simplified version of a progress bar suitable for Colab.
 It's usable, but still looking for a workaround.
 * If you see an error "No module named 'common'", make sure you've uncommented the assignment-specific line in step 6, restart your kernel and execute all cells again
 
-## Running elsewhere
+## 2. Running locally
 
-[AWS](AWS-tutorial.md)
+Two options here:
 
-[Docker](Docker-tutorial.md)
+1. Use the Docker container of our course. It already has all libraries, that you will need. The setup for you is very simple: install Docker application depending on your OS, download our container image, run everything within the container. Please, see this [detailed Docker tutorial]((Docker-tutorial.md)).
+
+2. Manually install all the libraries depending on your OS (each task contains a list of needed libraries in the very beginning). If you use Windows/MacOS you might find useful Anaconda distribution which allows to install easily most of the needed libraries. However, some tools, like StarSpace for week 2, are not compatible with Windows, so it's likely that you will have to use Docker anyways, if you go for these tasks.
+
+It might take a significant amount of time and resources to run the assignments code, but we expect that an average laptop is enough to accomplish the tasks. All assignments were tested in the Docker on Mac with 8GB RAM. If you have memory errors, that could be caused by not tested configurations or inefficient code. Consider reporting these cases or double-checking your code.
+
+For the final project, you will need to set up AWS machine - see [AWS tutorial here](AWS-tutorial.md). You are also welcome to try it out earlier during the course.
