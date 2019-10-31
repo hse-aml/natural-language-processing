@@ -1,6 +1,6 @@
 # Natural Language Processing course resources
 This github contains practical assignments for Natural Language Processing course by Higher School of Economics:
-https://www.coursera.org/learn/language-processing
+https://www.coursera.org/learn/language-processing.
 In this course you will learn how to solve common NLP problems using classical and deep learning approaches.
 
 From a practical side, we expect your familiarity with Python, since we will use it for all assignments in the course. Two of the assignments will also involve TensorFlow. You will work with many other libraries, including NLTK, Scikit-learn, and Gensim. You have several options on how to set it up.
