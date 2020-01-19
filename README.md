@@ -40,7 +40,7 @@ It's usable, but still looking for a workaround.
 
 Two options here:
 
-1. Use the Docker container of our course. It already has all libraries, that you will need. The setup for you is very simple: install Docker application depending on your OS, download our container image, run everything within the container. Please, see this [detailed Docker tutorial]((Docker-tutorial.md)).
+1. Use the Docker container of our course. It already has all libraries, that you will need. The setup for you is very simple: install Docker application depending on your OS, download our container image, run everything within the container. Please, see this [detailed Docker tutorial](Docker-tutorial.md).
 
 2. Manually install all the libraries depending on your OS (each task contains a list of needed libraries in the very beginning). If you use Windows/MacOS you might find useful Anaconda distribution which allows to install easily most of the needed libraries. However, some tools, like StarSpace for week 2, are not compatible with Windows, so it's likely that you will have to use Docker anyways, if you go for these tasks.
 
