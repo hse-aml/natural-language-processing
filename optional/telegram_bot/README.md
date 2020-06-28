@@ -1,6 +1,8 @@
-# Chatbot project
+# [Optional] Telegram bot 
 
-This folder contains the starting code for the chatbot project.
+This folder contains the starting code for the optional Telegram bot extension of the project.
+
+If you want to permanently host your bot, you can follow our [AWS tutorial](../../AWS-tutorial.md).
 
 ## Troubleshooting
 
