@@ -46,4 +46,4 @@ Two options here:
 
 It might take a significant amount of time and resources to run the assignments code, but we expect that an average laptop is enough to accomplish the tasks. All assignments were tested in the Docker on Mac with 8GB RAM. If you have memory errors, that could be caused by not tested configurations or inefficient code. Consider reporting these cases or double-checking your code.
 
-For the final project, you will need to set up AWS machine - see [AWS tutorial here](AWS-tutorial.md). You are also welcome to try it out earlier during the course.
+If you want to run the code of the course on the AWS machine, we've prepared the [AWS tutorial here](AWS-tutorial.md).
