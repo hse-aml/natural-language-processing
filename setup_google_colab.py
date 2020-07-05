@@ -52,9 +52,8 @@ def setup_week4():
 
 def setup_project():
     setup_common()
-    download_github_code("project/dialogue_manager.py")
-    download_github_code("project/main_bot.py")
-    download_github_code("project/utils.py")
+    download_github_code("week5/dialogue_manager.py")
+    download_github_code("week5/utils.py")
     setup_starspace()
 
 
