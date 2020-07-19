@@ -6,7 +6,7 @@ from collections import OrderedDict
 class Grader(object):
     def __init__(self):
         self.submission_page = 'https://www.coursera.org/api/onDemandProgrammingScriptSubmissions.v1'
-        self.assignment_key = 'MSsYBMLgEeesWhJPHRLG5g'
+        self.assignment_key = 'aB1eSDzq8aTFlEg7'
         self.parts = OrderedDict([('f5nXa', 'TextPrepare'), 
                                   ('hTrz8', 'WordsTagsCount'), 
                                   ('0kUjR', 'BagOfWords'), 
