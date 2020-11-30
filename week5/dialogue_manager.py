@@ -50,8 +50,9 @@ class DialogueManager(object):
 
         # Hint: you might want to create and train chatterbot.ChatBot here.
         # Create an instance of the ChatBot class.
-        # Create a trainer (chatterbot.trainers.ChatterBotCorpusTrainer) for the ChatBot.
+        # Set a trainer (set_trainer(ChatterBotCorpusTrainer)) for the ChatBot.
         # Train the ChatBot with "chatterbot.corpus.english" param.
+        # Note that we use chatterbot==0.7.6 in this project.
         
         ########################
         #### YOUR CODE HERE ####
