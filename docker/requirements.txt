@@ -1,5 +1,5 @@
 backports.weakref==1.0.post1
-bleach==1.5.0
+bleach==3.3.0
 certifi==2017.11.5
 chardet==3.0.4
 ChatterBot==0.7.6
